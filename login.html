@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>KUKINA - Giriş Yap</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      if (email === "test@kukina.com" && password === "123") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("❌ Hatalı e-posta veya şifre. Lütfen tekrar deneyiniz.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="center-screen">
+    <h1>Giriş Yap</h1>
+    <form onsubmit="handleLogin(event)">
+      <input type="email" id="email" placeholder="E-posta" required><br>
+      <input type="password" id="password" placeholder="Şifre" required><br>
+      <button type="submit" class="btn primary">Devam Et</button>
+    </form>
+  </div>
+</body>
+</html>
